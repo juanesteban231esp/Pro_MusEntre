@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: child_bronze
+    catalog: fmgc
+    schema: bronze
+
+    tables:
+      - name: customers

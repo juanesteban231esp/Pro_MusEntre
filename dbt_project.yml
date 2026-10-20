@@ -37,6 +37,20 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   port_databricks:
-    # Applies to all files under models/example/
-    example:
-      +materialized: table
+
+
+      # Applies to all files under models/example/
+      example:
+        +materialized: table
+
+      staging:
+        +schema: silver
+        +materialized: view
+
+      intermediate:
+        +schema: silver
+        +materialized: view
+
+      mars:
+        +schema: gold
+        +materialized: table
