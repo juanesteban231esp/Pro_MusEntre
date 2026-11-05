@@ -44,13 +44,16 @@ models:
         +materialized: table
 
       staging:
+        +catalog: fmgc
         +schema: silver
         +materialized: view
 
       intermediate:
+        +catalog: fmgc
         +schema: silver
         +materialized: view
 
       mars:
+        +catalog: fmgc
         +schema: gold
         +materialized: table
